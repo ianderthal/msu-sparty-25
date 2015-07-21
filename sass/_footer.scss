@@ -1,0 +1,358 @@
+
+footer#standard-MSU-footer {
+    width: 266px;
+    padding-left: 0px;
+    margin: 0 auto;
+
+    @include breakpoint(short) {
+      width: auto;
+      padding-left: 12px;
+    }
+    @include breakpoint(grande) {
+        padding-left: 0px;
+    }
+
+    .twelve.columns {
+      @include breakpoint(tall) {
+          float: right !important;
+          margin-top: 6px;
+        }
+    }
+    
+
+    .four.columns {
+      margin: 80px 0px 140px 0px;
+      @include breakpoint(short) {
+        margin: 20px 0px;
+      }
+      @include breakpoint(tall) {
+          float: left !important;
+          margin: 13px 18px 13px 0px;
+      }
+
+    }
+    
+    
+
+    height: auto;
+    
+
+
+    &.light-background {
+      #standard-footer-site-links {
+        ul {
+          li {
+            border-right: 1px solid $light-gray;
+            color: $msu-green!important;
+            a {
+              color: $msu-green;
+            }
+          }
+        }
+
+      }
+
+      #standard-footer-MSU-info {
+        ul {
+          
+          li {
+            
+              color: $msu-green;
+            
+            a {
+              color: $light-bkg-green!important;
+            }
+            span.msu-phone {
+              color: $light-bkg-green!important;
+            }
+          } 
+        }
+      }
+
+
+      
+    }//light-background
+
+    &.dark-background {
+       #standard-footer-site-links {
+        ul {
+          li {
+            border-right: 1px solid $darker-gray;
+            a {
+              color: $white;
+            }
+
+          }
+        }
+      }
+
+      #standard-footer-MSU-info {
+        ul {
+          color: $white;
+          li {
+            a {
+              color: $dark-bkg-green!important;
+            }
+            span.msu-phone {
+              color: $dark-bkg-green!important;
+            }
+          }
+        }
+
+      }
+
+      
+    }//dark-background
+
+    
+
+    
+
+    #standard-footer-site-links {
+
+      float: left;
+
+      border-bottom: 1px dotted #808080;
+      text-align: left;
+      padding-bottom: 12px;
+      width: 100%;
+      @include breakpoint(short) {
+        width: auto;
+      }
+      @include breakpoint(tall) {
+        padding-bottom: 0px;
+        
+      }
+      ul {
+        margin: 0px;
+        float: left;
+        padding-left: 0px;
+        text-align: center;
+        width: 266px;
+        @include breakpoint(short) {
+          text-align: left;
+          width: auto;
+        }
+        @include breakpoint(tall) {
+          height: 26px;
+        }
+
+        li {
+          display: inline;
+          padding: 0 0 0 4px;
+          margin-bottom: 0px;
+          &:first-child {
+            padding-left: 0px;
+          }
+          &:last-child {
+            border-right: 0px!important;
+          }
+          a {
+            font-size: 14px;
+            padding: 0 8px 0 0;
+            white-space: nowrap;
+            text-decoration: none;
+            @include breakpoint(short) {
+              font-size: 12px;
+            }
+          }
+          a:hover, a:focus {
+            text-decoration: underline;
+          }
+          &:nth-child(1) {
+            color: $white;
+            float: left;
+            width: 100%;
+            font-size: 13px;
+            border-right: 0px;
+            @include breakpoint(short) {
+              text-align: left;
+            }
+            @include breakpoint(tall) {
+              clear: none; 
+              padding: 0 8px 0 0;
+              float: none;
+              width: auto;
+              border-right: 1px solid $dark-gray;
+            }
+          }
+          
+          &:nth-child(2) {
+            padding-left: 0px;
+            @include breakpoint(tall) {
+              padding-left: 4px;
+            }
+          }
+          &:nth-child(3) {
+            border-right: 0px;
+            @include breakpoint(short) {
+              border-right: 1px solid $dark-gray;
+            }
+
+          }
+          &:nth-child(4) {
+            padding-left: 0px;
+            @include breakpoint(short) {
+              padding: 0 0 0 4px;
+            }
+
+          }
+        }
+      }
+    
+
+    }
+
+    
+
+    #standard-footer-MSU-info {
+     
+      padding-top: 12px;
+      
+      @include breakpoint(short) {
+        text-align: left;
+      }
+      @include breakpoint(tall) {
+        float: left;
+        margin-top: -6px;
+        padding-top: 0px;
+      }
+
+      ul {
+        margin: 0 auto;
+        padding-left: 0px;
+        @include breakpoint(short) {
+          margin: 0px;
+        }
+        @include breakpoint(tall) {
+          width: 100%;
+          height: 16px;
+
+        }
+
+        
+        li {
+          margin-bottom: 0px;
+          font-size: 10px;
+          line-height: 10px;
+          display: inline;
+          border-right: 1px solid $dark-gray;
+          padding: 0px 8px 0px 4px;
+          @include breakpoint(short) {
+            font-size: 9px;
+          }
+          @include breakpoint(tall) {
+            width: 100%;
+
+          }
+          &:first-child {
+            padding-left: 0px;
+          }
+          &:last-child {
+            border-right: 0px!important;
+          }
+          a {
+            font-weight: bold;
+            text-decoration: none;
+          }
+          a:hover, a:focus {
+       
+            text-decoration: underline;
+          }
+          &:nth-child(2) {
+            border-right: 0px;
+            @include breakpoint(tall) {
+              border-right: 1px solid $dark-gray;
+            }
+          }
+          
+          &:nth-child(3) {
+            float: left;
+            width: 100%;
+            clear: both;
+            padding-left: 0px;
+            @include breakpoint(tall) {
+              float: none;
+              width: auto;
+            }
+            span {
+              float: left;
+              width: 100%;
+              padding: 5px 0px 0px 0px;
+              @include breakpoint(short) {
+                float: none;
+                width: auto;
+                padding: 0px;
+              }
+            }
+          }
+          &:nth-child(4) {
+            padding-left: 0px!important;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: $sans-serif-font-heavy;
+          }
+          &.spartans-will {
+            text-transform: uppercase;
+            font-weight: 600;
+          }
+        }
+      } 
+
+      ul.copyright {
+        li:first-child {
+          float: left;
+          width: 100%;
+          padding: 6px 0px;
+          border-right: 0px;
+          @include breakpoint(short) {
+            float: none;
+            width: auto;
+            border-right: 1px solid #444444;
+            padding: 0px 4px 0px 0px;
+          }
+        }
+        li:last-child {
+          float: left;
+          width: 100%;
+          padding: 0px;
+          @include breakpoint(short) {
+            float: none;
+            width: auto;
+            padding: 0px 0px 0px 4px;
+          }
+        }
+      }
+
+    }
+    
+
+
+    #standard-footer-MSU-wordmark {
+      
+          .print-msuwordmark {
+            display: none;
+            @media print {
+              display: block;
+            }
+          }
+
+          img {
+            width: 100%;
+            max-width: 266px;
+            .screen-msuwordmark {
+              @media print {
+                display: none;
+              }
+            }
+          }
+          
+    }
+
+
+    
+
+
+}
+
+

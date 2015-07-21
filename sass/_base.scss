@@ -1,0 +1,98 @@
+/* Typefaces */
+
+$sans-serif-font: 'Gotham SSm A', 'Gotham SSm B', arial, sans-serif;
+$sans-serif-font-large: 'Gotham A', 'Gotham B', arial, sans-serif;
+$sans-serif-font-heavy: 'Gotham B', arial black, sans-serif;
+$serif-font: Georgia, Times, serif;
+$code-font: monospace, monospace;
+
+
+
+/* Descriptive Colors */
+
+$bronze:        #835d41;
+$msu-green:     #18453b;
+$light-bkg-green: #4c7e00;
+$dark-bkg-green: #84d123;
+
+$heading-green: #00723f;
+
+$nav-dark-L1: #272727;
+$nav-dark-L2: #3f3f3f;
+$nav-dark-L2-border: #6e6e6e;
+$nav-dark-L3: #505050;
+$nav-dark-L3-border: #636363;
+
+$nav-light-L1: #ffffff;
+$nav-light-L2: #cccccc;
+$nav-light-L2-border: #6e6e6e;
+$nav-light-L3: #999999;
+$nav-light-L3-border: #636363;
+
+
+$darkest-gray:  #222;
+$darker-gray:  	#333;
+$dark-gray:     #444;
+$gray:          #555;
+$light-gray:    #666;
+$lighter-gray:  #777;
+$lightest-gray: #999;
+$silver:        #ddd; 
+$white:         #fff;
+$black:			    #000;
+
+/* Functional Colors */
+
+$header-color:            $msu-green;
+$link-color:              $bronze;
+$text-color:              $darkest-gray;
+
+
+
+@mixin breakpoint($point) {
+  
+  @if $point == grande {
+    @media (min-width: 964px) { @content; } 
+  }
+  @if $point == tall {
+    @media (min-width: 871px) { @content; } 
+  }
+  @if $point == short {
+    @media (min-width: 460px) { @content; } 
+  }
+  
+}
+
+
+a {
+  color: $bronze;
+  text-decoration: underline;
+  outline: 0;
+  &:visited {
+    color: $bronze;
+    text-decoration: underline;
+    outline: 0;
+  }
+  &:hover, &:focus {
+    color: $darker-gray;
+  }
+}
+
+p a {
+  line-height: inherit;
+  &:visited {
+    line-height: inherit;
+  }
+}
+
+
+img.scale-with-grid {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.hide {
+  position: absolute;
+  left: -9999px;
+}

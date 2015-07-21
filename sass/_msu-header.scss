@@ -1,0 +1,36 @@
+#msu-masthead {
+  height: 60px;
+  padding-left: 12px;
+  @include breakpoint(grande) {
+    padding-left: 0px;
+  }
+  img {
+    padding-top: 12px;
+    max-width: 298px;
+    width: 100%;
+    &.print-msugraphic {
+      display: none;
+      @media print {
+        display: block;
+      }
+    }
+    @media print {
+      display: none;
+    }
+    
+  }
+}
+
+.u-header-column {
+  width: 68%;
+  float: left;
+  position: relative;
+  @include breakpoint(tall) {
+    width: 45%;
+  }
+}
+
+
+
+
+  

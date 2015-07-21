@@ -1,0 +1,112 @@
+h1, h2, h3, h4, h5, h6 {
+  color: $heading-green;
+  font-family: $serif-font;
+  font-weight: normal;
+  @media print {
+    color: $darkest-gray!important;
+  }
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: inherit;
+}
+
+h1 {
+  font-size: 42px;
+  line-height: 48px;
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 14px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 8px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 6px;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.subheader {
+  color: $lighter-gray;
+}
+
+p {
+  margin: 0 0 20px 0;
+  img {
+    margin: 0;
+  }
+  &.lead {
+    font-size: 21px;
+    line-height: 27px;
+    color: $lighter-gray;
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+
+small {
+  font-size: 80%;
+}
+
+/*    Blockquotes  */
+
+blockquote {
+  font-size: 16px;
+  line-height: 22px;
+  color: $light-gray;
+  font-style: italic;
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    color: $light-gray;
+    font-style: italic;
+  }
+  margin: 0 0 20px;
+  padding: 9px 20px 0 19px;
+  border-left: 1px solid $silver;
+  cite {
+    display: block;
+    font-size: 12px;
+    color: $gray;
+    &:before {
+      content: "\2014 \0020";
+    }
+    a {
+      color: $gray;
+      &:visited {
+        color: $gray;
+      }
+    }
+  }
+}
+
+hr {
+  border: solid $silver;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 30px;
+  height: 0;
+}
+

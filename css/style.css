@@ -1,0 +1,1530 @@
+/* Table of Content
+==================================================
+	#Normalize	
+	#Basic Styles
+	#Typography
+	#Lists
+	#MSU Masthead 
+	#Search Tool
+	#Desktop/Responsive Navigation
+	#Custom Content
+	#Standard Footer 
+	#Grid Based Column Widths
+	/
+
+ 
+
+
+/* #Normalize 
+================================================== */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio, canvas, progress, video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden], template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent; }
+  a:active, a:hover {
+    outline: 0; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b, strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button, input, optgroup, select, textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+  text-transform: none; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button, html input[type="button"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+  input::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
+  input[type="checkbox"], input[type="radio"] {
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */ }
+  input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    height: auto; }
+  input[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    -moz-box-sizing: content-box;
+    /* 2 */
+    box-sizing: content-box; }
+    input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+/* #Basic Styles
+================================================== */
+/* Typefaces */
+/* Descriptive Colors */
+/* Functional Colors */
+a {
+  color: #835d41;
+  text-decoration: underline;
+  outline: 0; }
+  a:visited {
+    color: #835d41;
+    text-decoration: underline;
+    outline: 0; }
+  a:hover, a:focus {
+    color: #333; }
+
+p a {
+  line-height: inherit; }
+  p a:visited {
+    line-height: inherit; }
+
+img.scale-with-grid {
+  max-width: 100%;
+  height: auto; }
+
+.hide {
+  position: absolute;
+  left: -9999px; }
+
+/* #Typography
+================================================== */
+h1, h2, h3, h4, h5, h6 {
+  color: #00723f;
+  font-family: Georgia, Times, serif;
+  font-weight: normal; }
+  @media print {
+    h1, h2, h3, h4, h5, h6 {
+      color: #222 !important; } }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: inherit; }
+
+h1 {
+  font-size: 42px;
+  line-height: 48px;
+  margin-bottom: 18px; }
+
+h2 {
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 14px; }
+
+h3 {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 8px; }
+
+h4 {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 6px; }
+
+h5 {
+  font-size: 16px;
+  line-height: 20px; }
+
+h6 {
+  font-size: 14px;
+  line-height: 21px; }
+
+.subheader {
+  color: #777; }
+
+p {
+  margin: 0 0 20px 0; }
+  p img {
+    margin: 0; }
+  p.lead {
+    font-size: 21px;
+    line-height: 27px;
+    color: #777; }
+
+em {
+  font-style: italic; }
+
+small {
+  font-size: 80%; }
+
+/*    Blockquotes  */
+blockquote {
+  font-size: 16px;
+  line-height: 22px;
+  color: #666;
+  font-style: italic;
+  margin: 0 0 20px;
+  padding: 9px 20px 0 19px;
+  border-left: 1px solid #ddd; }
+  blockquote p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #666;
+    font-style: italic; }
+  blockquote cite {
+    display: block;
+    font-size: 12px;
+    color: #555; }
+    blockquote cite:before {
+      content: "\2014 \0020"; }
+    blockquote cite a {
+      color: #555; }
+      blockquote cite a:visited {
+        color: #555; }
+
+hr {
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 30px;
+  height: 0; }
+
+/* #Lists
+================================================== */
+ul, ol {
+  margin-bottom: 20px; }
+
+ul {
+  list-style: none outside; }
+
+ol {
+  list-style: decimal;
+  margin-left: 30px; }
+
+ul.square, ul.circle, ul.disc {
+  margin-left: 30px; }
+ul.square {
+  list-style: square outside; }
+ul.circle {
+  list-style: circle outside; }
+ul.disc {
+  list-style: disc outside; }
+ul ul, ul ol {
+  margin: 4px 0 5px 30px;
+  font-size: 90%; }
+
+ol ol, ol ul {
+  margin: 4px 0 5px 30px;
+  font-size: 90%; }
+
+ul ul li, ul ol li {
+  margin-bottom: 6px; }
+
+ol ol li, ol ul li {
+  margin-bottom: 6px; }
+
+li {
+  line-height: 18px;
+  margin-bottom: 12px; }
+
+ul.large li, li p {
+  line-height: 21px; }
+
+/* #MSU Masthead
+================================================== */
+#msu-masthead {
+  height: 60px;
+  padding-left: 12px; }
+  @media (min-width: 964px) {
+    #msu-masthead {
+      padding-left: 0px; } }
+  #msu-masthead img {
+    padding-top: 12px;
+    max-width: 298px;
+    width: 100%; }
+    #msu-masthead img.print-msugraphic {
+      display: none; }
+      @media print {
+        #msu-masthead img.print-msugraphic {
+          display: block; } }
+    @media print {
+      #msu-masthead img {
+        display: none; } }
+
+.u-header-column {
+  width: 68%;
+  float: left;
+  position: relative; }
+  @media (min-width: 871px) {
+    .u-header-column {
+      width: 45%; } }
+
+/* #Search Tool
+================================================== */
+.u-search-column {
+  width: 20%;
+  float: right;
+  position: relative; }
+  @media (min-width: 871px) {
+    .u-search-column {
+      width: 50%; } }
+
+#search-wrapper-mobile {
+  display: block;
+  float: left;
+  padding: 2% 0 0 14px;
+  width: 100%; }
+  @media (min-width: 871px) {
+    #search-wrapper-mobile {
+      display: none; } }
+
+.js-nav #search-wrapper {
+  display: none; }
+
+#search-wrapper {
+  padding-right: 0px;
+  margin-top: 15px; }
+  @media (min-width: 871px) {
+    #search-wrapper {
+      padding-right: 12px; } }
+  @media (min-width: 964px) {
+    #search-wrapper {
+      padding-right: 0px; } }
+
+#search-tool-box {
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 3px;
+  float: none;
+  width: 90%;
+  margin-bottom: 12px;
+  height: 28px; }
+  @media (min-width: 871px) {
+    #search-tool-box {
+      width: 319px;
+      float: right; } }
+  #search-tool-box input#q {
+    width: 80%;
+    padding-left: 8px;
+    border: 0px;
+    background-color: transparent;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    color: #666;
+    font-size: 12px;
+    font-weight: normal;
+    float: left;
+    height: 26px;
+    outline: none; }
+    @media (min-width: 871px) {
+      #search-tool-box input#q {
+        width: 252px; } }
+
+#btn_search {
+  height: 28px;
+  width: 34px;
+  background: white url(../images/icon-search.png) no-repeat center;
+  cursor: pointer;
+  outline: 0px none;
+  border: 0pc none;
+  float: right;
+  margin: 0 auto;
+  text-indent: -9999px;
+  text-transform: capitalize;
+  border-radius: 0px 3px 3px 0px; }
+  #btn_search:hover {
+    box-shadow: inset 0 0px 60px rgba(0, 0, 0, 0.3); }
+
+#bottom-nav-search-box {
+  height: 28px;
+  width: 93%;
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 3px;
+  margin-left: 12px; }
+  @media (min-width: 460px) {
+    #bottom-nav-search-box {
+      width: 86%; } }
+  #bottom-nav-search-box input#q {
+    width: 76%;
+    padding-left: 12px;
+    border: 0px;
+    font-size: 12px;
+    outline: none; }
+
+.no-js .u-search-column, .no-js .u-header-column {
+  width: 100%;
+  float: none; }
+
+/* #Desktop/Responsive Navigation
+================================================== */
+#home-icon a span {
+  text-indent: none;
+  background: transparent;
+  color: #fff; }
+  @media (min-width: 871px) {
+    #home-icon a span {
+      display: inline-block;
+      width: 30px;
+      height: 13px;
+      padding-left: 8px;
+      background: url(../images/sprite-ico-home.png) center -45px no-repeat;
+      text-indent: -9999px;
+      text-transform: capitalize; } }
+@media (min-width: 871px) {
+  #home-icon a:hover span {
+    background: url(../images/sprite-ico-home.png) center -45px no-repeat; } }
+
+.no-js .u-nav-btn {
+  display: none; }
+
+#outer-wrap {
+  width: 100%;
+  overflow: hidden; }
+
+#inner-wrap {
+  width: 100%;
+  position: relative; }
+
+.js-ready #inner-wrap {
+  right: 0px;
+  -webkit-transition: right .3s ease;
+  transition: right .3s ease; }
+
+.js-nav #inner-wrap {
+  right: 300px;
+  -webkit-transition: right .3s ease;
+  transition: right .3s ease;
+  position: fixed; }
+
+.js-nav #dim-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  opacity: .6;
+  z-index: 5; }
+
+#nav {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  padding-top: 0;
+  background: #444; }
+  @media (min-width: 871px) {
+    #nav {
+      height: 43px;
+      background: #000;
+      display: table;
+      z-index: 200;
+      position: relative;
+      width: 100%;
+      color: #fff;
+      right: 0px; } }
+  #nav .close-btn {
+    position: absolute;
+    top: -3.75em;
+    right: 1.875em; }
+    @media (min-width: 871px) {
+      #nav .close-btn {
+        display: none; } }
+  #nav ul {
+    clear: both;
+    padding-left: 0px; }
+    @media (min-width: 871px) {
+      #nav ul {
+        text-align: center;
+        white-space: nowrap;
+        display: table-row;
+        height: 43px; } }
+    #nav ul li {
+      position: relative; }
+      @media (min-width: 871px) {
+        #nav ul li {
+          border-top: 0px;
+          border-right: 1px solid rgba(255, 255, 255, 0.2);
+          display: table-cell; } }
+      @media (min-width: 871px) {
+        #nav ul li ul {
+          display: none;
+          height: auto; } }
+      @media (min-width: 871px) {
+        #nav ul li ul li ul {
+          display: none; } }
+      #nav ul li:last-child {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        @media (min-width: 871px) {
+          #nav ul li:last-child {
+            border-right: none;
+            border-bottom: 0px; } }
+      #nav ul li a {
+        padding: 14px 0px 14px 18px;
+        color: #fff;
+        /*
+        &:focus, &:hover {
+          color: $white;
+          background: $darker-gray;
+        }
+        */ }
+        @media (min-width: 871px) {
+          #nav ul li a {
+            display: block;
+            font-size: 0.875em;
+            line-height: 1.28571em;
+            font-weight: bold;
+            outline: none;
+            text-decoration: none;
+            padding: 12px 0 0 12px;
+            text-align: left;
+            height: 31px; } }
+  @media (min-width: 871px) {
+    #nav > ul {
+      position: relative; } }
+  @media (min-width: 871px) {
+    #nav > ul > li.home-icon {
+      width: 80px !important; } }
+  @media (min-width: 871px) {
+    #nav > ul > li.level-one {
+      background: transparent url("../images/down-chevron.png") 90% 17px no-repeat;
+      width: 142px; } }
+  #nav > ul > li.level-one > ul {
+    display: none; }
+    @media (min-width: 871px) {
+      #nav > ul > li.level-one > ul {
+        position: absolute; } }
+    @media (min-width: 871px) {
+      #nav > ul > li.level-one > ul > li {
+        display: block;
+        width: 140px;
+        height: 43px; } }
+    #nav > ul > li.level-one > ul > li.level-two > ul {
+      display: none; }
+  #nav > ul > li.level-one.active > ul {
+    display: block;
+    margin: 0px;
+    box-shadow: inset 10px 13px 8px -9px rgba(0, 0, 0, 0.2); }
+    @media (min-width: 871px) {
+      #nav > ul > li.level-one.active > ul {
+        background: rgba(45, 45, 45, 0.9);
+        white-space: normal;
+        border-radius: 0px 0px 3px 3px;
+        border-left: 0px;
+        width: 142px;
+        padding-right: 1px; } }
+    #nav > ul > li.level-one.active > ul > li:last-child {
+      border-bottom: 0px; }
+    @media (min-width: 871px) {
+      #nav > ul > li.level-one.active > ul > li {
+        border: 0px; } }
+    #nav > ul > li.level-one.active > ul > li > a {
+      padding: 12px 12px 12px 18px; }
+      @media (min-width: 871px) {
+        #nav > ul > li.level-one.active > ul > li > a {
+          text-align: left;
+          text-transform: none;
+          width: 90%;
+          padding: 12px 0px 12px 12px; }
+          #nav > ul > li.level-one.active > ul > li > a:hover {
+            text-decoration: underline; } }
+    #nav > ul > li.level-one.active > ul > li.level-two.active > ul {
+      display: block;
+      margin: 0px;
+      box-shadow: inset 10px 13px 8px -9px rgba(0, 0, 0, 0.3);
+      border-left: 8px solid #636363; }
+      #nav > ul > li.level-one.active > ul > li.level-two.active > ul > li > a {
+        padding: 12px 12px 12px 18px; }
+  #nav > ul > li > a {
+    text-transform: uppercase; }
+
+.js-ready #nav {
+  right: -300px;
+  width: 0px;
+  box-shadow: inset 0.8em 0 0.8em -0.8em rgba(0, 0, 0, 0.5);
+  -webkit-transition: right .3s, width 1s;
+  transition: right .3s, width 1s; }
+  @media (min-width: 871px) {
+    .js-ready #nav {
+      position: relative;
+      width: 100%;
+      right: 0px; } }
+
+.js-nav #nav {
+  right: 0px;
+  width: 300px;
+  -webkit-transition: right .3s ease;
+  transition: right .3s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 999;
+  background: #272727;
+  color: #fff;
+  padding-top: 0px; }
+
+#off-canvas-nav-wrapper {
+  display: none; }
+  #off-canvas-nav-wrapper nav.dark-background {
+    background: #272727; }
+    #off-canvas-nav-wrapper nav.dark-background ul li a {
+      color: #fff; }
+    #off-canvas-nav-wrapper nav.dark-background #home-icon a span {
+      color: #fff; }
+    #off-canvas-nav-wrapper nav.dark-background #off-canvas-sitename {
+      border-top: 4px double #888; }
+      #off-canvas-nav-wrapper nav.dark-background #off-canvas-sitename a {
+        color: #fff; }
+    #off-canvas-nav-wrapper nav.dark-background #off-canvas-close-btn > a {
+      background: transparent url(../images/close-btn.png) 208px center no-repeat; }
+    #off-canvas-nav-wrapper nav.dark-background ul > li.level-one.active > ul {
+      background: #3f3f3f;
+      border-left: 8px solid #6e6e6e; }
+    #off-canvas-nav-wrapper nav.dark-background ul > li.level-one.active > ul > li.level-two.active > ul {
+      background: #505050; }
+    #off-canvas-nav-wrapper nav.dark-background li.level-one, #off-canvas-nav-wrapper nav.dark-background li.level-two {
+      background: transparent url("../images/down-chevron.png") 86% 20px no-repeat; }
+    #off-canvas-nav-wrapper nav.dark-background li.level-one.active, #off-canvas-nav-wrapper nav.dark-background li.level-two.active {
+      background: transparent url("../images/up-chevron.png") 86% 20px no-repeat; }
+  #off-canvas-nav-wrapper nav.light-background {
+    background: #ffffff; }
+    #off-canvas-nav-wrapper nav.light-background ul li a {
+      color: #222; }
+    #off-canvas-nav-wrapper nav.light-background ul > li > ul li a {
+      font-weight: 600; }
+    #off-canvas-nav-wrapper nav.light-background #home-icon a span {
+      color: #222; }
+    #off-canvas-nav-wrapper nav.light-background #off-canvas-sitename {
+      box-shadow: inset 0 1px 0 0 #888, inset 1px 4px 0 0 #ffffff, inset 1px 5px 0 0 #888; }
+      #off-canvas-nav-wrapper nav.light-background #off-canvas-sitename a {
+        color: #222; }
+    #off-canvas-nav-wrapper nav.light-background #off-canvas-close-btn > a {
+      background: transparent url(../images/close-btn-black.png) 208px center no-repeat; }
+    #off-canvas-nav-wrapper nav.light-background ul > li.level-one.active > ul {
+      background: #cccccc;
+      border-left: 8px solid #6e6e6e; }
+    #off-canvas-nav-wrapper nav.light-background ul li {
+      border-top: 1px solid rgba(0, 0, 0, 0.1); }
+    #off-canvas-nav-wrapper nav.light-background ul > li.level-one.active > ul > li.level-two.active > ul {
+      background: #999999; }
+    #off-canvas-nav-wrapper nav.light-background li.level-one, #off-canvas-nav-wrapper nav.light-background li.level-two {
+      background: transparent url("../images/down-chevron-black.png") 86% 20px no-repeat; }
+    #off-canvas-nav-wrapper nav.light-background li.level-one.active, #off-canvas-nav-wrapper nav.light-background li.level-two.active {
+      background: transparent url("../images/up-chevron-black.png") 86% 20px no-repeat; }
+  #off-canvas-nav-wrapper nav ul li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0px;
+    padding-right: 12px;
+    background: transparent;
+    width: 100%; }
+    #off-canvas-nav-wrapper nav ul li > ul > li {
+      border-top: 0px; }
+      #off-canvas-nav-wrapper nav ul li > ul > li > a {
+        border-bottom: 1px dotted #ccc;
+        padding: 12px 12px 12px 2px !important;
+        width: 240px;
+        margin-left: 18px; }
+      #off-canvas-nav-wrapper nav ul li > ul > li > ul > li a {
+        border-bottom: 1px dotted #ccc; }
+      #off-canvas-nav-wrapper nav ul li > ul > li > ul > li:last-child a {
+        border-bottom: 0px; }
+    #off-canvas-nav-wrapper nav ul li > ul > li.level-two.active > a {
+      border-bottom: 0px; }
+    #off-canvas-nav-wrapper nav ul li:last-child a {
+      border-bottom: 0px; }
+    #off-canvas-nav-wrapper nav ul li a:hover {
+      background: transparent; }
+    #off-canvas-nav-wrapper nav ul li a {
+      height: 100%;
+      width: 78%;
+      display: block;
+      text-decoration: none; }
+
+@media (min-width: 871px) {
+  #off-canvas-menu-buttons-wrapper {
+    display: none; } }
+#off-canvas-menu-buttons-wrapper #off-canvas-sitename {
+  width: 254px;
+  float: left;
+  line-height: 32px;
+  padding: 16px 0px 8px 18px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #888;
+  margin-left: 12px; }
+  #off-canvas-menu-buttons-wrapper #off-canvas-sitename a {
+    color: #fff;
+    font-family: georgia, serif;
+    font-size: 32px;
+    text-decoration: none; }
+#off-canvas-menu-buttons-wrapper #off-canvas-close-btn > a {
+  float: left;
+  display: block;
+  text-indent: -9999px;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 0px 8px;
+  height: 42px;
+  width: 100%; }
+
+header.light-background .u-nav-btn {
+  background: transparent url("../images/nav-icon-green.png") center right no-repeat; }
+
+header.dark-background .u-nav-btn {
+  background: transparent url("../images/nav-icon-white.png") center right no-repeat; }
+
+.u-nav-btn {
+  position: absolute;
+  top: -0.5em;
+  right: .5em;
+  display: block;
+  width: 75px;
+  height: 41px;
+  padding: 0;
+  border: 0;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: -9999px; }
+  .u-nav-btn:hover, .u-nav-btn:focus {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+  @media (min-width: 871px) {
+    .u-nav-btn {
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px; } }
+
+#static-footer-nav {
+  display: block;
+  background: #272727; }
+  @media (min-width: 871px) {
+    #static-footer-nav {
+      display: none; } }
+  #static-footer-nav ul {
+    padding-left: 0px; }
+    #static-footer-nav ul li {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin: 0px;
+      padding-right: 12px;
+      background: transparent;
+      width: 100%; }
+      #static-footer-nav ul li.level-one, #static-footer-nav ul li.level-two {
+        background: transparent url("../images/down-chevron.png") 86% 20px no-repeat; }
+      #static-footer-nav ul li.level-two.active, #static-footer-nav ul li.level-one.active {
+        background: transparent url("../images/up-chevron.png") 86% 20px no-repeat; }
+      #static-footer-nav ul li a {
+        padding: 14px 0px 14px 18px;
+        color: #fff;
+        text-decoration: none;
+        width: 80%;
+        height: 100%;
+        display: block; }
+      #static-footer-nav ul li a:hover {
+        background: transparent; }
+    #static-footer-nav ul > li.level-one > ul {
+      display: none; }
+      #static-footer-nav ul > li.level-one > ul > li.level-two > ul {
+        display: none; }
+    #static-footer-nav ul > ul {
+      padding-top: 12px; }
+    #static-footer-nav ul > li.level-one.active > ul {
+      display: block;
+      margin: 0px;
+      background: #3f3f3f;
+      border-left: 8px solid #6e6e6e;
+      box-shadow: inset 10px 13px 8px -9px rgba(0, 0, 0, 0.2); }
+      #static-footer-nav ul > li.level-one.active > ul > li {
+        border-top: 0px; }
+        #static-footer-nav ul > li.level-one.active > ul > li > a {
+          padding: 12px 12px 12px 2px !important;
+          width: 86%;
+          margin-left: 18px; }
+          @media (min-width: 460px) {
+            #static-footer-nav ul > li.level-one.active > ul > li > a {
+              width: 90%; } }
+      #static-footer-nav ul > li.level-one.active > ul > li:last-child a {
+        border-bottom: 0px !important; }
+      #static-footer-nav ul > li.level-one.active > ul > li.level-two.active a {
+        border-bottom: 0px; }
+      #static-footer-nav ul > li.level-one.active > ul > li.level-two.active > ul {
+        display: block;
+        margin: 0px;
+        background: #505050;
+        border-left: 8px solid #636363;
+        box-shadow: inset 10px 13px 8px -9px rgba(0, 0, 0, 0.3); }
+        #static-footer-nav ul > li.level-one.active > ul > li.level-two.active > ul > li {
+          border: 0px; }
+          #static-footer-nav ul > li.level-one.active > ul > li.level-two.active > ul > li > a {
+            border-top: 0px;
+            padding: 12px 12px 12px 2px !important;
+            width: 86%;
+            margin-left: 18px; }
+            @media (min-width: 460px) {
+              #static-footer-nav ul > li.level-one.active > ul > li.level-two.active > ul > li > a {
+                width: 90%; } }
+        #static-footer-nav ul > li.level-one.active > ul > li.level-two.active > ul > li:last-child a {
+          border-bottom: 0px !important; }
+      #static-footer-nav ul > li.level-one.active > ul > li:last-child {
+        border-bottom: 0px; }
+  #static-footer-nav #bottom-navigation {
+    padding-top: 12px; }
+    #static-footer-nav #bottom-navigation > ul > li {
+      text-transform: uppercase; }
+      #static-footer-nav #bottom-navigation > ul > li > ul > li {
+        text-transform: none; }
+  #static-footer-nav #static-footer-menu {
+    display: inline-block;
+    padding-top: 12px;
+    width: 100% !important; }
+    #static-footer-nav #static-footer-menu > div.static-footer-sitename {
+      float: left;
+      width: 97%;
+      line-height: 16px;
+      margin-top: 8px;
+      border-bottom: 1px solid #888;
+      padding: 12px 12px; }
+      #static-footer-nav #static-footer-menu > div.static-footer-sitename a {
+        font-size: 32px;
+        line-height: 32px;
+        color: #fff;
+        font-family: georgia, serif;
+        text-decoration: none; }
+
+nav#static-footer-nav.dark-background {
+  background: #272727; }
+  nav#static-footer-nav.dark-background ul > li.level-one.active > ul > li > a {
+    border-bottom: 1px dotted #ccc; }
+  nav#static-footer-nav.dark-background ul > li.level-one.active > ul > li.level-two.active > ul > li > a {
+    border-bottom: 1px dotted #ccc; }
+  nav#static-footer-nav.dark-background #bottom-navigation {
+    background: #272727; }
+  nav#static-footer-nav.dark-background ul li a {
+    color: #fff; }
+  nav#static-footer-nav.dark-background #home-icon a span {
+    color: #fff; }
+  nav#static-footer-nav.dark-background #static-footer-menu .static-footer-sitename {
+    border-top: 4px double #888; }
+    nav#static-footer-nav.dark-background #static-footer-menu .static-footer-sitename a {
+      color: #fff; }
+  nav#static-footer-nav.dark-background #off-canvas-close-btn > a {
+    background: transparent url(../images/close-btn.png) 208px center no-repeat; }
+  nav#static-footer-nav.dark-background ul > li.level-one.active > ul {
+    background: #3f3f3f;
+    border-left: 8px solid #6e6e6e; }
+  nav#static-footer-nav.dark-background ul li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  nav#static-footer-nav.dark-background ul > li.level-one.active > ul > li.level-two.active > ul {
+    background: #505050; }
+  nav#static-footer-nav.dark-background li.level-one, nav#static-footer-nav.dark-background li.level-two {
+    background: transparent url("../images/down-chevron.png") 86% 20px no-repeat; }
+  nav#static-footer-nav.dark-background li.level-one.active, nav#static-footer-nav.dark-background li.level-two.active {
+    background: transparent url("../images/up-chevron.png") 86% 20px no-repeat; }
+
+nav#static-footer-nav.light-background {
+  background: #ffffff; }
+  nav#static-footer-nav.light-background ul > li.level-one.active > ul > li > a {
+    border-bottom: 1px dotted #222; }
+  nav#static-footer-nav.light-background ul > li.level-one.active > ul > li.level-two.active > ul > li > a {
+    border-bottom: 1px dotted #222; }
+  nav#static-footer-nav.light-background #bottom-navigation {
+    background: #ffffff; }
+  nav#static-footer-nav.light-background ul li a {
+    color: #222; }
+  nav#static-footer-nav.light-background ul > li > ul li a {
+    font-weight: 600; }
+  nav#static-footer-nav.light-background #home-icon a span {
+    color: #222; }
+  nav#static-footer-nav.light-background #static-footer-menu .static-footer-sitename {
+    border-top: 4px double #888; }
+    nav#static-footer-nav.light-background #static-footer-menu .static-footer-sitename a {
+      color: #222; }
+  nav#static-footer-nav.light-background #off-canvas-close-btn > a {
+    background: transparent url(../images/close-btn-black.png) 208px center no-repeat; }
+  nav#static-footer-nav.light-background ul > li.level-one.active > ul {
+    background: #cccccc;
+    border-left: 8px solid #6e6e6e; }
+  nav#static-footer-nav.light-background ul li {
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  nav#static-footer-nav.light-background ul > li.level-one.active > ul > li.level-two.active > ul {
+    background: #999999; }
+  nav#static-footer-nav.light-background li.level-one, nav#static-footer-nav.light-background li.level-two {
+    background: transparent url("../images/down-chevron-black.png") 86% 20px no-repeat; }
+  nav#static-footer-nav.light-background li.level-one.active, nav#static-footer-nav.light-background li.level-two.active {
+    background: transparent url("../images/up-chevron-black.png") 86% 20px no-repeat; }
+
+/* #Custom Content 
+================================================== */
+body {
+  background: #d3d3d3 url() no-repeat top center;
+  background-size: 700px;
+  font: 16px/28px "Gotham SSm A", "Gotham SSm B", arial, sans-serif;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Fix for web rendering */
+  -webkit-text-size-adjust: 100%; }
+  @media (min-width: 460px) {
+    body {
+      background-size: 870px; } }
+  @media (min-width: 871px) {
+    body {
+      background: #d3d3d3 url() no-repeat top center;
+      background-size: 1060px; } }
+
+.site-heading {
+  height: 256px;
+  padding-left: 12px; }
+  @media (min-width: 460px) {
+    .site-heading {
+      height: 344px; } }
+  @media (min-width: 871px) {
+    .site-heading {
+      height: 430px; } }
+  @media (min-width: 964px) {
+    .site-heading {
+      padding-left: 0px; } }
+  @media print {
+    .site-heading {
+      height: 232px; } }
+  .site-heading h1 {
+    font-size: 60px;
+    line-height: 52px;
+    color: #fff;
+    font-size: 58px;
+    line-height: 46px;
+    letter-spacing: -1px;
+    margin-top: 0px; }
+    @media (min-width: 460px) {
+      .site-heading h1 {
+        font-size: 74px;
+        line-height: 63px; } }
+    @media (min-width: 871px) {
+      .site-heading h1 {
+        font-size: 78px;
+        line-height: 66px; } }
+    .site-heading h1 span.small-site-heading {
+      font-size: 24px;
+      line-height: 26px; }
+      @media (min-width: 460px) {
+        .site-heading h1 span.small-site-heading {
+          font-size: 26px; } }
+
+.columns.story-content {
+  background: #e6e6e6;
+  padding: 3% 12px; }
+  @media (min-width: 964px) {
+    .columns.story-content {
+      padding: 3%; } }
+  .columns.story-content h3 {
+    margin-top: 0px; }
+
+.story-heading {
+  padding-left: 12px; }
+  @media (min-width: 964px) {
+    .story-heading {
+      padding-left: 0px; } }
+  .story-heading h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 22px;
+    font-family: "Gotham A", "Gotham B", arial, sans-serif; }
+  .story-heading span.story-subheading {
+    text-transform: none;
+    font-weight: 400;
+    font-size: 24px;
+    font-family: "Gotham A", "Gotham B", arial, sans-serif; }
+
+/* #Standard Footer 
+================================================== */
+footer#standard-MSU-footer {
+  width: 266px;
+  padding-left: 0px;
+  margin: 0 auto;
+  height: auto; }
+  @media (min-width: 460px) {
+    footer#standard-MSU-footer {
+      width: auto;
+      padding-left: 12px; } }
+  @media (min-width: 964px) {
+    footer#standard-MSU-footer {
+      padding-left: 0px; } }
+  @media (min-width: 871px) {
+    footer#standard-MSU-footer .twelve.columns {
+      float: right !important;
+      margin-top: 6px; } }
+  footer#standard-MSU-footer .four.columns {
+    margin: 80px 0px 140px 0px; }
+    @media (min-width: 460px) {
+      footer#standard-MSU-footer .four.columns {
+        margin: 20px 0px; } }
+    @media (min-width: 871px) {
+      footer#standard-MSU-footer .four.columns {
+        float: left !important;
+        margin: 13px 18px 13px 0px; } }
+  footer#standard-MSU-footer.light-background #standard-footer-site-links ul li {
+    border-right: 1px solid #666;
+    color: #18453b !important; }
+    footer#standard-MSU-footer.light-background #standard-footer-site-links ul li a {
+      color: #18453b; }
+  footer#standard-MSU-footer.light-background #standard-footer-MSU-info ul li {
+    color: #18453b; }
+    footer#standard-MSU-footer.light-background #standard-footer-MSU-info ul li a {
+      color: #4c7e00 !important; }
+    footer#standard-MSU-footer.light-background #standard-footer-MSU-info ul li span.msu-phone {
+      color: #4c7e00 !important; }
+  footer#standard-MSU-footer.dark-background #standard-footer-site-links ul li {
+    border-right: 1px solid #333; }
+    footer#standard-MSU-footer.dark-background #standard-footer-site-links ul li a {
+      color: #fff; }
+  footer#standard-MSU-footer.dark-background #standard-footer-MSU-info ul {
+    color: #fff; }
+    footer#standard-MSU-footer.dark-background #standard-footer-MSU-info ul li a {
+      color: #84d123 !important; }
+    footer#standard-MSU-footer.dark-background #standard-footer-MSU-info ul li span.msu-phone {
+      color: #84d123 !important; }
+  footer#standard-MSU-footer #standard-footer-site-links {
+    float: left;
+    border-bottom: 1px dotted #808080;
+    text-align: left;
+    padding-bottom: 12px;
+    width: 100%; }
+    @media (min-width: 460px) {
+      footer#standard-MSU-footer #standard-footer-site-links {
+        width: auto; } }
+    @media (min-width: 871px) {
+      footer#standard-MSU-footer #standard-footer-site-links {
+        padding-bottom: 0px; } }
+    footer#standard-MSU-footer #standard-footer-site-links ul {
+      margin: 0px;
+      float: left;
+      padding-left: 0px;
+      text-align: center;
+      width: 266px; }
+      @media (min-width: 460px) {
+        footer#standard-MSU-footer #standard-footer-site-links ul {
+          text-align: left;
+          width: auto; } }
+      @media (min-width: 871px) {
+        footer#standard-MSU-footer #standard-footer-site-links ul {
+          height: 26px; } }
+      footer#standard-MSU-footer #standard-footer-site-links ul li {
+        display: inline;
+        padding: 0 0 0 4px;
+        margin-bottom: 0px; }
+        footer#standard-MSU-footer #standard-footer-site-links ul li:first-child {
+          padding-left: 0px; }
+        footer#standard-MSU-footer #standard-footer-site-links ul li:last-child {
+          border-right: 0px !important; }
+        footer#standard-MSU-footer #standard-footer-site-links ul li a {
+          font-size: 14px;
+          padding: 0 8px 0 0;
+          white-space: nowrap;
+          text-decoration: none; }
+          @media (min-width: 460px) {
+            footer#standard-MSU-footer #standard-footer-site-links ul li a {
+              font-size: 12px; } }
+        footer#standard-MSU-footer #standard-footer-site-links ul li a:hover, footer#standard-MSU-footer #standard-footer-site-links ul li a:focus {
+          text-decoration: underline; }
+        footer#standard-MSU-footer #standard-footer-site-links ul li:nth-child(1) {
+          color: #fff;
+          float: left;
+          width: 100%;
+          font-size: 13px;
+          border-right: 0px; }
+          @media (min-width: 460px) {
+            footer#standard-MSU-footer #standard-footer-site-links ul li:nth-child(1) {
+              text-align: left; } }
+          @media (min-width: 871px) {
+            footer#standard-MSU-footer #standard-footer-site-links ul li:nth-child(1) {
+              clear: none;
+              padding: 0 8px 0 0;
+              float: none;
+              width: auto;
+              border-right: 1px solid #444; } }
+        footer#standard-MSU-footer #standard-footer-site-links ul li:nth-child(2) {
+          padding-left: 0px; }
+          @media (min-width: 871px) {
+            footer#standard-MSU-footer #standard-footer-site-links ul li:nth-child(2) {
+              padding-left: 4px; } }
+        footer#standard-MSU-footer #standard-footer-site-links ul li:nth-child(3) {
+          border-right: 0px; }
+          @media (min-width: 460px) {
+            footer#standard-MSU-footer #standard-footer-site-links ul li:nth-child(3) {
+              border-right: 1px solid #444; } }
+        footer#standard-MSU-footer #standard-footer-site-links ul li:nth-child(4) {
+          padding-left: 0px; }
+          @media (min-width: 460px) {
+            footer#standard-MSU-footer #standard-footer-site-links ul li:nth-child(4) {
+              padding: 0 0 0 4px; } }
+  footer#standard-MSU-footer #standard-footer-MSU-info {
+    padding-top: 12px; }
+    @media (min-width: 460px) {
+      footer#standard-MSU-footer #standard-footer-MSU-info {
+        text-align: left; } }
+    @media (min-width: 871px) {
+      footer#standard-MSU-footer #standard-footer-MSU-info {
+        float: left;
+        margin-top: -6px;
+        padding-top: 0px; } }
+    footer#standard-MSU-footer #standard-footer-MSU-info ul {
+      margin: 0 auto;
+      padding-left: 0px; }
+      @media (min-width: 460px) {
+        footer#standard-MSU-footer #standard-footer-MSU-info ul {
+          margin: 0px; } }
+      @media (min-width: 871px) {
+        footer#standard-MSU-footer #standard-footer-MSU-info ul {
+          width: 100%;
+          height: 16px; } }
+      footer#standard-MSU-footer #standard-footer-MSU-info ul li {
+        margin-bottom: 0px;
+        font-size: 10px;
+        line-height: 10px;
+        display: inline;
+        border-right: 1px solid #444;
+        padding: 0px 8px 0px 4px; }
+        @media (min-width: 460px) {
+          footer#standard-MSU-footer #standard-footer-MSU-info ul li {
+            font-size: 9px; } }
+        @media (min-width: 871px) {
+          footer#standard-MSU-footer #standard-footer-MSU-info ul li {
+            width: 100%; } }
+        footer#standard-MSU-footer #standard-footer-MSU-info ul li:first-child {
+          padding-left: 0px; }
+        footer#standard-MSU-footer #standard-footer-MSU-info ul li:last-child {
+          border-right: 0px !important; }
+        footer#standard-MSU-footer #standard-footer-MSU-info ul li a {
+          font-weight: bold;
+          text-decoration: none; }
+        footer#standard-MSU-footer #standard-footer-MSU-info ul li a:hover, footer#standard-MSU-footer #standard-footer-MSU-info ul li a:focus {
+          text-decoration: underline; }
+        footer#standard-MSU-footer #standard-footer-MSU-info ul li:nth-child(2) {
+          border-right: 0px; }
+          @media (min-width: 871px) {
+            footer#standard-MSU-footer #standard-footer-MSU-info ul li:nth-child(2) {
+              border-right: 1px solid #444; } }
+        footer#standard-MSU-footer #standard-footer-MSU-info ul li:nth-child(3) {
+          float: left;
+          width: 100%;
+          clear: both;
+          padding-left: 0px; }
+          @media (min-width: 871px) {
+            footer#standard-MSU-footer #standard-footer-MSU-info ul li:nth-child(3) {
+              float: none;
+              width: auto; } }
+          footer#standard-MSU-footer #standard-footer-MSU-info ul li:nth-child(3) span {
+            float: left;
+            width: 100%;
+            padding: 5px 0px 0px 0px; }
+            @media (min-width: 460px) {
+              footer#standard-MSU-footer #standard-footer-MSU-info ul li:nth-child(3) span {
+                float: none;
+                width: auto;
+                padding: 0px; } }
+        footer#standard-MSU-footer #standard-footer-MSU-info ul li:nth-child(4) {
+          padding-left: 0px !important;
+          font-weight: 600;
+          text-transform: uppercase;
+          font-family: "Gotham B", arial black, sans-serif; }
+        footer#standard-MSU-footer #standard-footer-MSU-info ul li.spartans-will {
+          text-transform: uppercase;
+          font-weight: 600; }
+    footer#standard-MSU-footer #standard-footer-MSU-info ul.copyright li:first-child {
+      float: left;
+      width: 100%;
+      padding: 6px 0px;
+      border-right: 0px; }
+      @media (min-width: 460px) {
+        footer#standard-MSU-footer #standard-footer-MSU-info ul.copyright li:first-child {
+          float: none;
+          width: auto;
+          border-right: 1px solid #444444;
+          padding: 0px 4px 0px 0px; } }
+    footer#standard-MSU-footer #standard-footer-MSU-info ul.copyright li:last-child {
+      float: left;
+      width: 100%;
+      padding: 0px; }
+      @media (min-width: 460px) {
+        footer#standard-MSU-footer #standard-footer-MSU-info ul.copyright li:last-child {
+          float: none;
+          width: auto;
+          padding: 0px 0px 0px 4px; } }
+  footer#standard-MSU-footer #standard-footer-MSU-wordmark .print-msuwordmark {
+    display: none; }
+    @media print {
+      footer#standard-MSU-footer #standard-footer-MSU-wordmark .print-msuwordmark {
+        display: block; } }
+  footer#standard-MSU-footer #standard-footer-MSU-wordmark img {
+    width: 100%;
+    max-width: 266px; }
+    @media print {
+      footer#standard-MSU-footer #standard-footer-MSU-wordmark img .screen-msuwordmark {
+        display: none; } }
+
+/* #Grid Based Column Widths 
+================================================== */
+.container {
+  padding: 0px;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0; }
+  .container .row {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0; }
+    .container .row .row {
+      min-width: 0px; }
+      .container .row .row .column, .container .row .row .columns {
+        padding: 0; }
+    @media (min-width: 871px) {
+      .container .row .column:first-child, .container .row .columns:first-child, .container .row .alpha {
+        margin-left: 0px; } }
+    .container .row .column:last-child, .container .row .columns:last-child {
+      margin-right: 0;
+      /*float: none;*/ }
+    @media (min-width: 871px) {
+      .container .row .column.omega, .container .row .columns.omega {
+        float: right; } }
+    .container .row .column, .container .row .columns {
+      width: auto;
+      float: none;
+      margin-left: 0px;
+      margin-right: 0px; }
+      @media (min-width: 871px) {
+        .container .row .column, .container .row .columns {
+          margin-left: 2.127663%;
+          float: left;
+          min-height: 1px;
+          position: relative;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box; } }
+    @media (min-width: 871px) {
+      .container .row {
+        margin: 0 auto;
+        max-width: 960px;
+        min-width: 870px; }
+        .container .row .one.columns {
+          width: 4.255326%; }
+        .container .row .two.columns {
+          width: 10.638315%; }
+        .container .row .three.columns {
+          width: 17.021304%; }
+        .container .row .four.columns {
+          width: 23.404293%; }
+        .container .row .five.columns {
+          width: 29.787282%; }
+        .container .row .six.columns {
+          width: 36.170271%; }
+        .container .row .seven.columns {
+          width: 42.55326%; }
+        .container .row .eight.columns {
+          width: 48.936249%; }
+        .container .row .nine.columns {
+          width: 55.319238%; }
+        .container .row .ten.columns {
+          width: 61.702227%; }
+        .container .row .eleven.columns {
+          width: 68.085216%; }
+        .container .row .twelve.columns {
+          width: 74.468205%; }
+        .container .row .thirteen.columns {
+          width: 80.851194%; }
+        .container .row .fourteen.columns {
+          width: 87.234183%; }
+        .container .row .fifteen.columns {
+          width: 93.617172%; }
+        .container .row .sixteen.columns {
+          width: 100%; } }
+
+.clearfix {
+  clear: both; }
+
+/*# sourceMappingURL=style.css.map */

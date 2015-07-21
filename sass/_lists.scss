@@ -1,0 +1,59 @@
+ul, ol {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none outside;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 30px;
+}
+
+ul {
+  &.square, &.circle, &.disc {
+    margin-left: 30px;
+  }
+  &.square {
+    list-style: square outside;
+  }
+  &.circle {
+    list-style: circle outside;
+  }
+  &.disc {
+    list-style: disc outside;
+  }
+  ul, ol {
+    margin: 4px 0 5px 30px;
+    font-size: 90%;
+  }
+}
+
+ol {
+  ol, ul {
+    margin: 4px 0 5px 30px;
+    font-size: 90%;
+  }
+}
+
+ul {
+  ul li, ol li {
+    margin-bottom: 6px;
+  }
+}
+
+ol {
+  ol li, ul li {
+    margin-bottom: 6px;
+  }
+}
+
+li {
+  line-height: 18px;
+  margin-bottom: 12px;
+}
+
+ul.large li, li p {
+  line-height: 21px;
+}

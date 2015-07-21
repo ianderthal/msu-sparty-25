@@ -1,0 +1,112 @@
+// These are site specific styles
+
+
+body {
+  background: black url(../images/bg-photo-small.jpg) no-repeat top center;
+  background-size: 700px;
+  font: 16px / 28px $sans-serif-font;
+  color: $darker-gray;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Fix for web rendering */
+  -webkit-text-size-adjust: 100%;
+
+  @include breakpoint(short) {
+    background-size: 870px;
+  }
+
+  @include breakpoint(tall) {
+    background: black url(../images/bg-photo-large.jpg) no-repeat top center;
+    background-size: 1060px;
+  }
+}
+
+
+
+
+.site-heading {
+  height: 256px;
+  padding-left: 12px;
+  @include breakpoint(short) {  
+    height: 344px;
+  }
+
+  @include breakpoint(tall) {
+    height: 430px;
+  }
+
+  @include breakpoint(grande) {
+    padding-left: 0px;
+  }
+
+  @media print {
+    height: 232px;
+  }
+
+  h1 {
+    font-size: 60px;
+    line-height: 52px;
+    color: $white;
+    font-size: 58px;
+    line-height: 46px;
+    letter-spacing: -1px;
+    margin-top: 0px;
+      
+    @include breakpoint(short) {
+      font-size: 74px;
+      line-height: 63px;
+    }
+
+    @include breakpoint(tall) {
+      font-size: 78px;
+      line-height: 66px;
+      
+    }
+
+    span.small-site-heading {
+      font-size: 24px;
+      line-height: 26px;
+      @include breakpoint(short) {
+        font-size: 26px;
+      }
+    }
+  }
+
+}
+
+.columns.story-content {
+  background: #e6e6e6;
+  padding: 3% 12px;
+  
+  @include breakpoint(grande) {
+    padding: 3%;
+  }
+  h3 {
+    margin-top: 0px;
+  }
+}
+  
+
+.story-heading {
+  padding-left: 12px;
+  @include breakpoint(grande) {
+    padding-left: 0px;
+  }
+  h2 {
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 22px;
+    font-family: $sans-serif-font-large;
+  }
+
+  span.story-subheading {
+    text-transform: none;
+    font-weight: 400;
+    font-size: 24px;
+    font-family: $sans-serif-font-large;
+  }
+}
+
+

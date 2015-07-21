@@ -1,0 +1,151 @@
+.u-search-column {
+    width: 20%;
+    float: right;
+    position: relative;
+    @include breakpoint(tall) {
+      width: 50%;
+    }
+}
+
+
+
+
+#search-wrapper-mobile {
+    display: block;
+    float: left;
+    padding: 2% 0 0 14px;
+    width: 100%;
+    @include breakpoint(tall) {
+      display: none;
+    }
+}
+
+
+.js-nav #search-wrapper {
+    display: none;
+}
+
+
+#search-wrapper {
+    padding-right: 0px;
+
+    @include breakpoint(tall) {
+      padding-right: 12px;
+    }
+    margin-top: 15px;
+    @include breakpoint(grande) {
+      padding-right: 0px;
+    }
+ 
+}
+
+#search-tool-box {
+  background: $white;
+  border: 1px solid $lightest-gray;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  float: none;
+  width: 90%;
+  margin-bottom: 12px;
+  height: 28px;
+  @include breakpoint(tall) {
+    
+    width: 319px;
+    float: right;
+  }
+  
+  input#q {
+    width: 80%;
+    padding-left: 8px;
+    border: 0px;
+    @include breakpoint(tall) {
+      width: 252px;
+    }
+    background-color: transparent;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    color: $light-gray;
+    font-size: 12px;
+    font-weight: normal;
+    float: left;
+    height: 26px;
+    outline: none;
+    
+  }
+}
+
+#btn_search {
+  height: 28px;
+  width: 34px;
+  background: white url(../images/icon-search.png) no-repeat center;
+  cursor: pointer;
+  outline: 0px none;
+  border: 0pc none;
+  float: right;
+  margin: 0 auto;
+  text-indent: -9999px;
+  text-transform: capitalize;
+  -webkit-border-radius: 0px 3px 3px 0px;
+  -moz-border-radius: 0px 3px 3px 0px;
+  border-radius: 0px 3px 3px 0px;
+  &:hover {
+    -moz-box-shadow: inset 0 0px 60px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0px 60px rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+#bottom-nav-search-box {
+  height: 28px;
+  width: 93%;
+  background: $white;
+  border: 1px solid $lightest-gray;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-left: 12px;
+  @include breakpoint(short) {
+    width: 86%;
+  }
+  input#q {
+    width: 76%;
+    padding-left: 12px;
+    border: 0px;
+    font-size: 12px;
+    outline: none;
+    
+  }
+
+}
+
+ 
+
+
+
+.no-js {
+  .u-search-column, .u-header-column {
+    width: 100%;
+    float: none;
+  }
+}
+
+
+
+  
+  
+
+
+
+  
+  
+
+
+

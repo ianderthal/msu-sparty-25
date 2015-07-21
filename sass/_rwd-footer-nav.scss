@@ -1,0 +1,259 @@
+#static-footer-nav {
+
+  display: block;
+  background: $nav-dark-L1;
+  @include breakpoint(tall) {
+    display: none;
+  }
+
+  
+  
+  ul {
+    padding-left: 0px;
+    li {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin: 0px;
+      padding-right: 12px;
+      background: transparent;
+      width: 100%;
+
+      &.level-one, &.level-two {
+        background: transparent url('../images/down-chevron.png') 86% 20px no-repeat;
+      }
+      &.level-two.active, &.level-one.active {
+      background: transparent url('../images/up-chevron.png') 86% 20px no-repeat;
+      }
+
+      a {
+          padding: 14px 0px 14px 18px;
+          color: $white;
+          text-decoration: none;
+          width: 80%;
+          height: 100%;
+          display: block;
+      }
+      a:hover {
+        background: transparent;
+      }
+    }
+
+    > li.level-one > ul {
+      display: none;
+      > li.level-two > ul {
+        display: none;
+      }
+    }
+    > ul {
+      padding-top: 12px;
+
+      
+    }
+
+    > li.level-one.active > ul {
+
+        display: block;
+        margin: 0px;
+        background: $nav-dark-L2;
+        border-left: 8px solid $nav-dark-L2-border;
+        box-shadow: inset 10px 13px 8px -9px rgba(0, 0, 0, 0.2);
+
+        > li {
+          border-top: 0px;
+          > a {
+            
+            padding: 12px 12px 12px 2px!important;
+            width: 86%;
+            margin-left: 18px;
+            @include breakpoint(short) {
+              width: 90%;
+            }
+          }
+        }
+        > li:last-child a {
+          border-bottom: 0px !important;
+        }
+
+        > li.level-two.active a {
+          border-bottom: 0px;
+        }
+
+        > li.level-two.active > ul {
+          display: block;
+          margin: 0px;
+          background: $nav-dark-L3;
+          border-left: 8px solid $nav-dark-L3-border;
+          box-shadow: inset 10px 13px 8px -9px rgba(0, 0, 0, 0.3);
+          
+          > li {
+            border: 0px;
+            > a {
+              
+              border-top: 0px;
+              padding: 12px 12px 12px 2px!important;
+              width: 86%;
+              margin-left: 18px;
+              @include breakpoint(short) {
+                width: 90%;
+              }
+            }
+          }
+
+          > li:last-child a {
+          border-bottom: 0px !important;
+        }
+
+        }
+
+        > li:last-child {
+          border-bottom: 0px;
+        }
+    } 
+  
+  }
+ 
+
+  #bottom-navigation {
+    > ul > li {
+        text-transform: uppercase;
+        > ul > li {
+          text-transform: none;
+        }
+    }
+    
+    padding-top: 12px;
+  }
+
+  #static-footer-menu {
+    > div {
+      
+      &.static-footer-sitename {
+        float: left;
+        width: 97%;
+        line-height: 16px;
+        margin-top: 8px;
+        border-bottom: 1px solid #888;
+        padding: 12px 12px;
+        a {
+          font-size: 32px;
+          line-height: 32px;
+          color: $white;
+          font-family: georgia, serif;
+          text-decoration: none;
+        }
+        
+      }
+      
+    }
+    display: inline-block;
+    padding-top: 12px;
+    width: 100%!important;
+  }
+
+
+} 
+
+
+
+  nav#static-footer-nav.dark-background {
+
+      ul > li.level-one.active > ul > li > a {
+        border-bottom: 1px dotted #ccc;
+      }
+
+      ul > li.level-one.active > ul > li.level-two.active > ul > li > a {
+        border-bottom: 1px dotted #ccc;
+      }
+
+      #bottom-navigation {
+        background: $nav-dark-L1;
+      }
+
+      background: $nav-dark-L1;
+      ul li a {color: #fff;}
+
+      #home-icon a span {color: #fff;}
+
+      #static-footer-menu .static-footer-sitename {
+        border-top: 4px double #888;
+        a {
+          color: #fff;
+        }
+      }
+      #off-canvas-close-btn > a {
+        background: transparent url(../images/close-btn.png) 208px center no-repeat;
+      }
+
+      ul > li.level-one.active > ul {
+        background: $nav-dark-L2;
+        border-left: 8px solid $nav-dark-L2-border;
+      }
+
+      ul li {
+        border-top: 1px solid rgba(255, 255, 255, 0.1)
+      }
+
+      ul > li.level-one.active > ul > li.level-two.active > ul {
+        background: $nav-dark-L3;
+      }
+
+      li.level-one, li.level-two {
+        background: transparent url('../images/down-chevron.png') 86% 20px no-repeat;
+      }
+      li.level-one.active, li.level-two.active {
+        background: transparent url('../images/up-chevron.png') 86% 20px no-repeat;
+      }
+  }
+
+
+
+
+    nav#static-footer-nav.light-background {
+
+      ul > li.level-one.active > ul > li > a {
+        border-bottom: 1px dotted #222;
+      }
+
+      ul > li.level-one.active > ul > li.level-two.active > ul > li > a {
+        border-bottom: 1px dotted #222;
+      }
+
+      #bottom-navigation {
+        background: $nav-light-L1;
+      }
+
+       background: $nav-light-L1;
+       ul li a {color: #222;}
+       ul > li > ul li a {font-weight: 600;}
+
+       #home-icon a span {color: #222;}
+
+      #static-footer-menu .static-footer-sitename {
+        a {
+          color: #222;
+        }
+        border-top: 4px double #888;
+      }
+      #off-canvas-close-btn > a {
+        background: transparent url(../images/close-btn-black.png) 208px center no-repeat;
+      }
+
+      ul > li.level-one.active > ul {
+        background: $nav-light-L2;
+        border-left: 8px solid $nav-dark-L2-border;
+      }
+
+      ul li {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      ul > li.level-one.active > ul > li.level-two.active > ul {
+        background: $nav-light-L3;
+      }
+      li.level-one, li.level-two {
+        background: transparent url('../images/down-chevron-black.png') 86% 20px no-repeat;
+      }
+      li.level-one.active, li.level-two.active {
+        background: transparent url('../images/up-chevron-black.png') 86% 20px no-repeat;
+      }
+    }
+    
+  

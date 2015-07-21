@@ -1,0 +1,495 @@
+
+#home-icon a {
+
+  span {
+    text-indent: none;
+    background: transparent;
+    color: $white;
+    @include breakpoint(tall) {
+      display: inline-block;
+      width: 30px;
+      height: 13px;
+      padding-left: 8px;
+      background: url(../images/sprite-ico-home.png) center -45px no-repeat;
+      text-indent: -9999px;
+      text-transform: capitalize;
+    }
+  }
+  &:hover span {
+    @include breakpoint(tall) {background: url(../images/sprite-ico-home.png) center -45px no-repeat;}
+  }
+}
+
+
+
+.no-js {
+  .u-nav-btn {
+    display: none;
+  }
+}
+
+
+#outer-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+#inner-wrap {
+  width: 100%;
+  position: relative;
+}  
+
+.js-ready #inner-wrap {
+  right: 0px;
+  -webkit-transition: right .3s ease;
+  -moz-transition: right .3s ease;
+  -o-transition: right .3s ease;
+  -ms-transition: right .3s ease;
+  transition: right .3s ease;
+
+}
+
+.js-nav #inner-wrap {
+  right: 300px;
+  -webkit-transition: right .3s ease;
+  -moz-transition: right .3s ease;
+  -o-transition: right .3s ease;
+  -ms-transition: right .3s ease;
+  transition: right .3s ease;
+  position: fixed;
+}
+
+
+.js-nav #dim-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $darker-gray;
+  opacity: .6;
+  z-index: 5;
+}
+
+
+#nav {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  padding-top: 0;
+  background: #444;
+  
+  
+  @include breakpoint(tall) {
+    height: 43px;
+    background: $black;
+    display: table;
+    z-index: 200;
+    position: relative;
+    width: 100%;
+    color: $white;
+    right: 0px
+  }
+
+  .close-btn {
+    position: absolute;
+    top: -3.75em;
+    right: 1.875em;
+    @include breakpoint(tall) {
+      display: none;
+    }
+  }
+  ul {
+    clear: both;
+    padding-left: 0px;
+
+    @include breakpoint(tall) {
+      text-align: center;
+      white-space: nowrap;
+      display: table-row;
+      height: 43px;
+      
+    }
+
+    li {
+      position: relative;
+      
+      @include breakpoint(tall) {
+        border-top: 0px;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        display: table-cell;
+        
+      }
+      ul {
+        @include breakpoint(tall) {
+          display: none;
+          height: auto;
+        }
+        li ul {
+          @include breakpoint(tall) {display: none;}
+        }
+      }
+      &:last-child {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        @include breakpoint(tall){
+          border-right: none;
+          border-bottom: 0px;
+        }
+      }
+      a {
+
+        padding: 14px 0px 14px 18px;
+        color: $white;
+        @include breakpoint(tall) {
+          display: block;
+          font-size: 0.875em;
+          line-height: 1.28571em;
+          font-weight: bold;
+          outline: none;
+          
+          text-decoration: none;
+          padding: 12px 0 0 12px;
+          text-align: left;
+          height: 31px;
+        }
+        /*
+        &:focus, &:hover {
+          color: $white;
+          background: $darker-gray;
+        }
+        */
+      }
+    } 
+
+  }
+
+  
+  > ul { 
+    @include breakpoint(tall) {
+      position: relative;
+    }
+    > li.home-icon {
+      @include breakpoint(tall) {
+        width: 80px!important;
+      }
+
+    }
+    > li {
+
+      &.level-one {
+        @include breakpoint(tall) {
+          background: transparent url('../images/down-chevron.png') 90% 17px no-repeat;
+          width: 142px;
+        }
+
+        > ul {
+          display: none;
+          @include breakpoint(tall) {
+            position: absolute;
+          }
+          > li {
+            @include breakpoint(tall) {
+              display: block;
+              width: 140px;
+              height: 43px;
+            }
+          }
+          > li.level-two > ul {
+            display: none;
+          }
+        }
+      }
+      &.level-one.active > ul {
+        display: block;
+        margin: 0px;
+        box-shadow: inset 10px 13px 8px -9px rgba(0, 0, 0, 0.2);
+        @include breakpoint(tall) {
+          background: rgba(45, 45, 45, 0.9);
+          white-space: normal;
+          border-radius: 0px 0px 3px 3px;
+          border-left: 0px;
+          width: 142px;
+          padding-right: 1px;
+        }
+        > li:last-child {
+          border-bottom: 0px;
+        }
+        > li {
+          @include breakpoint(tall) {
+            border: 0px;
+          }
+          > a {
+            padding: 12px 12px 12px 18px;
+            @include breakpoint(tall) {
+              text-align: left;
+              text-transform: none;
+              width: 90%;
+              padding: 12px 0px 12px 12px;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        > li.level-two.active > ul {
+          display: block;
+          margin: 0px;
+          
+          box-shadow: inset 10px 13px 8px -9px rgba(0, 0, 0, 0.3);
+          border-left: 8px solid $nav-dark-L3-border;
+          > li > a{
+            padding: 12px 12px 12px 18px;
+          }
+        }
+      }
+      > a {
+        text-transform: uppercase;
+      }
+      
+    }
+  }
+
+}
+
+
+.js-ready #nav {
+  right: -300px;
+  width: 0px;
+  
+  -webkit-box-shadow: inset 0.8em 0 0.8em -0.8em rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0.8em 0 0.8em -0.8em rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0.8em 0 0.8em -0.8em rgba(0, 0, 0, 0.5);
+  -webkit-transition: right .3s, width 1s;
+  -moz-transition: right .3s, width 1s;
+  -o-transition: right .3s, width 1s;
+  -ms-transition: right .3s, width 1s;
+  transition: right .3s, width 1s;
+  
+  @include breakpoint(tall) {
+    position: relative;
+    width: 100%;
+    right: 0px;
+    
+  }
+} 
+
+
+.js-nav #nav {
+  right: 0px;
+  width: 300px;
+  
+  -webkit-transition: right .3s ease;
+  -moz-transition: right .3s ease;
+  -o-transition: right .3s ease;
+  -ms-transition: right .3s ease;
+  transition: right .3s ease;
+  
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 999;
+  background: $nav-dark-L1;
+  color: $white;
+  padding-top: 0px;
+} 
+
+#off-canvas-nav-wrapper {
+
+  display: none;
+  
+
+  nav.dark-background {
+
+    background: $nav-dark-L1;
+    ul li a {color: #fff;}
+
+    #home-icon a span {color: #fff;}
+
+    #off-canvas-sitename {
+      border-top: 4px double #888;
+      a {
+        color: #fff;
+      }
+    }
+    #off-canvas-close-btn > a {
+      background: transparent url(../images/close-btn.png) 208px center no-repeat;
+    }
+
+    ul > li.level-one.active > ul {
+      background: $nav-dark-L2;
+      border-left: 8px solid $nav-dark-L2-border;
+    }
+
+
+
+    ul > li.level-one.active > ul > li.level-two.active > ul {
+      background: $nav-dark-L3;
+    }
+
+    li.level-one, li.level-two {
+      background: transparent url('../images/down-chevron.png') 86% 20px no-repeat;
+    }
+    li.level-one.active, li.level-two.active {
+      background: transparent url('../images/up-chevron.png') 86% 20px no-repeat;
+    }
+  }
+
+
+
+
+  nav.light-background {
+
+   background: $nav-light-L1;
+   ul li a {color: #222;}
+   ul > li > ul li a {font-weight: 600;}
+
+   #home-icon a span {color: #222;}
+
+   #off-canvas-sitename {
+    a {
+      color: #222;
+    }
+    box-shadow: inset 0 1px 0 0 #888, inset 1px 4px 0 0 $nav-light-L1, inset 1px 5px 0 0 #888;
+  }
+  #off-canvas-close-btn > a {
+    background: transparent url(../images/close-btn-black.png) 208px center no-repeat;
+  }
+
+  ul > li.level-one.active > ul {
+    background: $nav-light-L2;
+    border-left: 8px solid $nav-dark-L2-border;
+  }
+
+  ul li {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  ul > li.level-one.active > ul > li.level-two.active > ul {
+    background: $nav-light-L3;
+  }
+  li.level-one, li.level-two {
+    background: transparent url('../images/down-chevron-black.png') 86% 20px no-repeat;
+  }
+  li.level-one.active, li.level-two.active {
+    background: transparent url('../images/up-chevron-black.png') 86% 20px no-repeat;
+  }
+}
+
+
+
+
+nav {
+  ul {
+    li {
+
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin: 0px;
+      padding-right: 12px;
+      background: transparent;
+      width: 100%;
+      > ul > li
+      {
+        border-top: 0px;
+        > a {
+          border-bottom: 1px dotted #ccc;
+          padding: 12px 12px 12px 2px!important;
+          width: 240px;
+          margin-left: 18px;
+        }
+
+        > ul > li a {
+         border-bottom: 1px dotted #ccc;
+       }
+       > ul > li:last-child a {
+         border-bottom: 0px;
+       }
+     }
+     > ul > li.level-two.active > a {
+      border-bottom: 0px;
+    }
+    &:last-child a {
+      border-bottom: 0px;
+    }
+
+    a:hover {
+      background: transparent;
+    }
+    a {
+      height: 100%;
+      width: 78%;
+      display: block;
+      text-decoration: none;
+    }
+  } 
+
+}
+}
+}
+
+#off-canvas-menu-buttons-wrapper {
+  @include breakpoint(tall) { 
+    display: none;
+  }
+  #off-canvas-sitename {
+    width: 254px;
+    float: left;
+    line-height: 32px;
+    padding: 16px 0px 8px 18px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #888;
+    
+    margin-left: 12px;
+    a {
+      color: $white;
+      font-family: georgia, serif;
+      font-size: 32px;
+      text-decoration: none;
+    }
+  }
+  #off-canvas-close-btn > a {
+    float: left;
+    
+    display: block;
+    text-indent: -9999px;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 0px 8px;
+    height: 42px;
+    width: 100%;
+  }
+}
+
+
+header.light-background .u-nav-btn {
+  background: transparent url("../images/nav-icon-green.png") center right no-repeat;
+}
+
+header.dark-background .u-nav-btn {
+  background: transparent url("../images/nav-icon-white.png") center right no-repeat;
+}
+
+.u-nav-btn {
+  position: absolute;
+  top: -0.5em;
+  right: .5em;
+  display: block;
+  width: 75px;
+  height: 41px;
+  padding: 0;
+  border: 0;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: -9999px;
+  &:hover, &:focus {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+  }
+  
+  @include breakpoint(tall) {
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+
